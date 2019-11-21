@@ -1,0 +1,25 @@
+{
+  "name": "goltdd",
+  "version": "1.0.0",
+  "description": "Game of Life with TDD",
+  "main": "docs/gol_engine.js",
+  "directories": {
+    "bin": "docs",
+    "test": "__tests__"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "aexg",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
