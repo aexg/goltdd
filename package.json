@@ -8,7 +8,9 @@
     "test": "__tests__"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node node_modules/parcel-bundler/bin/cli.js docs/index.html",
+    "build": "node node_modules/parcel-bundler/bin/cli.js build docs/index.html"
   },
   "jest": {
     "collectCoverage": true
@@ -20,6 +22,7 @@
   "author": "aexg",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.4"
   }
 }
