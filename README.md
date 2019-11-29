@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/aexg/goltdd.svg?style=svg)](https://circleci.com/gh/aexg/goltdd)
+
 # Game of Life
 
 This implementation of Conway's Game of Life is inspired by the Code Retreat
