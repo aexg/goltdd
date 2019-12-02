@@ -25,4 +25,27 @@ jobs:
       - run:
           name: test
           command: npm test
+  test:
+    docker:
+  		- image: circleci/node:current
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+
+      - run:
+          name: install-npm
+          command: npm install
+
+      - run: 
+          name: execute test cases
+          command: npm test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
 
