@@ -1,14 +1,10 @@
 version: 2
 jobs:
-  build: 
+  build:
     docker:
       - image: circleci/node:current
-    steps: 
+    steps:
       - checkout
-
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
 
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
@@ -38,7 +34,7 @@ jobs:
           name: install-npm
           command: npm install
 
-      - run: 
+      - run:
           name: execute test cases
           command: npm test
 
@@ -48,4 +44,3 @@ workflows:
     jobs:
       - build
       - test
-
